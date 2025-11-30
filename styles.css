@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Main Content */
+.main {
+    padding: 40px 0;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 60px;
+    color: white;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.hero-card {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: left;
+}
+
+/* Glass Card Effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(31, 38, 135, 0.3);
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* Blog Posts Section */
+.section-title {
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.post-card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.post-image {
+    height: 200px;
+    border-radius: 15px 15px 0 0;
+    margin: -25px -25px 20px -25px;
+}
+
+.post-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.post-excerpt {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Footer */
+.footer {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 40px 0;
+    margin-top: 80px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Additional Frutiger Aero Elements */
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+    z-index: -1;
+}
+
+.bubble:nth-child(1) {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 5%;
+    opacity: 0.3;
+}
+
+.bubble:nth-child(2) {
+    width: 200px;
+    height: 200px;
+    bottom: 10%;
+    right: 5%;
+    opacity: 0.2;
+}
+
+.bubble:nth-child(3) {
+    width: 150px;
+    height: 150px;
+    top: 40%;
+    right: 20%;
+    opacity: 0.25;
+}
